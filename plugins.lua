@@ -76,20 +76,7 @@ local plugins = {
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
         }
-    },
-
-    {
-        "sbdchd/neoformat",
-        ft = {
-            "java",
-            "html",
-            "css",
-            "scss",
-            "ts",
-            "sh",
-            "lua",
-        },
-    },
+    }
 }
 
 return plugins
