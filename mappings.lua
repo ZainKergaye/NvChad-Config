@@ -8,9 +8,16 @@ M.general = {
     --  format with conform
     ["<leader>fm"] = {
       function()
-        require("conform").format()
+        vim.cmd("Neoformat");
       end,
-      "formatting",
+      "Formatting",
+    },
+
+    ["<leader>fj"] = {
+      function()
+        vim.lsp.buf.format({bufnr = 0});
+      end,
+      "Java Formatting",
     }
 
   },

@@ -7,6 +7,7 @@ local options = {
 
 		javascript = { "prettier" },
 		css = { "prettier" },
+		scss = { "prettier" },
 		html = { "prettier" },
 		java = { "prettier" },
 
