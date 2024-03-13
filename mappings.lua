@@ -8,21 +8,34 @@ M.general = {
     --  format with conform
     ["<leader>fm"] = {
       function()
-        vim.cmd("Neoformat");
+        vim.cmd "Neoformat"
       end,
-      "Formatting",
+      "Format file",
     },
 
     ["<leader>fj"] = {
       function()
-        vim.lsp.buf.format({bufnr = 0});
+        vim.lsp.buf.format { bufnr = 0 }
       end,
       "Java Formatting",
-    }
+    },
 
+    ["<leader>gp"] = {
+      function()
+        vim.cmd "Gitsigns preview_hunk"
+      end,
+      "Git preview hunk",
+    },
+
+    ["<leader>gb"] = {
+      function()
+        vim.cmd "Gitsigns toggle_current_line_blame"
+      end,
+      "Git toggle line blame",
+    },
   },
   v = {
-    [">"] = { ">gv", "indent"},
+    [">"] = { ">gv", "indent" },
   },
 }
 

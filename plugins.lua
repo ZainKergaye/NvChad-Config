@@ -82,6 +82,11 @@ local plugins = {
         'sbdchd/neoformat',
         lazy = false,
     },
+
+    {
+        'tpope/vim-fugitive',
+        lazy = false,
+    },
 }
 
 return plugins
