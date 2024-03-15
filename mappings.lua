@@ -20,7 +20,7 @@ M.general = {
       "Java Formatting",
     },
 
-    ["<leader>gp"] = {
+    ["<leader>gh"] = {
       function()
         vim.cmd "Gitsigns preview_hunk"
       end,

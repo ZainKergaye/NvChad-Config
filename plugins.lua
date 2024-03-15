@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -16,7 +16,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -64,29 +64,37 @@ local plugins = {
     "danymat/neogen",
     config = true,
     -- Uncomment next line if you want to follow only stable versions
-    -- version = "*" 
+    -- version = "*"
     ft = { "java" },
   },
-    {
+  {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     ft = { "java", "html", "scss", "md" }, -- TODO Comments only for .java files
     opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-        }
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
     },
+  },
 
-    {
-        'sbdchd/neoformat',
-        lazy = false,
-    },
+  {
+    "sbdchd/neoformat", -- Formatting for all files asside from java
+    lazy = false,
+  },
 
-    {
-        'tpope/vim-fugitive',
-        lazy = false,
-    },
+  {
+    "tpope/vim-fugitive", -- Git integration
+    lazy = false,
+  },
+
+  {
+    "mfussenegger/nvim-dap",
+  },
+
+  {
+    "rcarriga/nvim-dap-ui",
+  },
 }
 
 return plugins
