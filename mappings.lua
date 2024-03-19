@@ -66,7 +66,7 @@ M.general = {
       function()
         require('dap').step_over()
       end,
-      "Debug step into",
+      "Debug step over",
     },
 },
   v = {
