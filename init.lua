@@ -15,4 +15,4 @@ opt.softtabstop = 4
 
 
 -- Debug adapter protocol
--- require("custom.configs.dap")
+-- require "lua.custom.configs.dap"

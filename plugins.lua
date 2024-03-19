@@ -70,7 +70,7 @@ local plugins = {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    ft = { "java", "html", "scss", "md" }, -- TODO Comments only for .java files
+    ft = { "java", "html", "scss", "md" },
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
@@ -79,7 +79,7 @@ local plugins = {
   },
 
   {
-    "sbdchd/neoformat", -- Formatting for all files asside from java
+    "sbdchd/neoformat", -- Formatting for all files aside from java
     lazy = false,
   },
 
@@ -89,11 +89,35 @@ local plugins = {
   },
 
   {
-    "mfussenegger/nvim-dap",
-  },
-
-  {
-    "rcarriga/nvim-dap-ui",
+    "nvim-java/nvim-java",
+    lazy = false,
+    dependencies = {
+      "nvim-java/lua-async-await",
+      "nvim-java/nvim-java-core",
+      "nvim-java/nvim-java-test",
+      "nvim-java/nvim-java-dap",
+      "MunifTanjim/nui.nvim",
+      "neovim/nvim-lspconfig",
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+      {
+        "williamboman/mason.nvim",
+        opts = {
+          registries = {
+            "github:nvim-java/mason-registry",
+            "github:mason-org/mason-registry",
+          },
+        },
+      },
+    },
+    config = function()
+      require("java").setup {}
+      require("lspconfig").jdtls.setup {
+        on_attach = require("plugins.configs.lspconfig").on_attach,
+        capabilities = require("plugins.configs.lspconfig").capabilities,
+        filetypes = { "java" },
+      }
+    end,
   },
 }
 
