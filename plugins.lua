@@ -100,6 +100,7 @@ local plugins = {
       "neovim/nvim-lspconfig",
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui",
+      "nvim-neotest/nvim-nio",
       {
         "williamboman/mason.nvim",
         opts = {

@@ -33,7 +33,42 @@ M.general = {
       end,
       "Git toggle line blame",
     },
-  },
+
+    ["<leader>mb"] = {
+      function()
+        require('dap').toggle_breakpoint()
+      end,
+      "Debug toggle breakpoint",
+    },
+
+    ["<leader>md"] = {
+      function()
+        require('dap').continue()
+      end,
+      "Start debug",
+    },
+
+    ["<leader>ms"] = {
+      function()
+        require('dap').terminate()
+      end,
+      "Stop debug",
+    },
+
+    ["<leader>mi"] = {
+      function()
+        require('dap').step_into()
+      end,
+      "Debug step into",
+    },
+
+    ["<leader>mo"] = {
+      function()
+        require('dap').step_over()
+      end,
+      "Debug step into",
+    },
+},
   v = {
     [">"] = { ">gv", "indent" },
   },
