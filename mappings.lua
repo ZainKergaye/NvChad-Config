@@ -68,6 +68,34 @@ M.general = {
       end,
       "Debug step over",
     },
+
+    ["<leader>tn"] = {
+      function()
+        vim.cmd "tabnew"
+      end,
+      "New tab",
+    },
+
+    ["<leader>tr"] = {
+      function()
+        vim.cmd "tabclose"
+      end,
+      "Close tab",
+    },
+
+    ["<leader>tk"] = {
+      function()
+        vim.cmd "tabNext"
+      end,
+      "Next tab",
+    },
+
+    ["<leader>tj"] = {
+      function()
+        vim.cmd "tabprevious"
+      end,
+      "Previous tab",
+    },
 },
   v = {
     [">"] = { ">gv", "indent" },
