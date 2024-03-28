@@ -120,6 +120,12 @@ local plugins = {
       }
     end,
   },
+  {
+    "https://git.sr.ht/~swaits/thethethe.nvim",
+    lazy = true,
+    opts = {},
+    filetypes = { "adoc" },
+  },
 }
 
 return plugins

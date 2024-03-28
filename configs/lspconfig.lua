@@ -15,3 +15,8 @@ end
 
 -- 
 -- lspconfig.pyright.setup { blabla}
+--
+-- Registry: https://mason-registry.dev/registry/list
+-- https://github.com/williamboman/mason-lspconfig.nvim#default-configuration
+-- Templates:
+-- https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/server_configurations
